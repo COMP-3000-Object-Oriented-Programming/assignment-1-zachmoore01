@@ -1,13 +1,15 @@
 #include <iostream>
+using namespace std;
 
-using namespace std; 
+int main() {
+    int var,dbl,sqr;
+    cout << "Please enter a number:";
+    cin >> var;
 
-int main(){
+    dbl = var*2;
+    sqr = var*var;
 
-    int first = 5; 
-    double second = 7; 
-
-    cout << "first is: " << first << " " << "second is: " << second << endl ; 
-
-    return 0; 
+    cout << "\nYour number doubled is " <<dbl;
+    cout << "\nSquaring your number equals " <<sqr;
+    return 0;
 }
