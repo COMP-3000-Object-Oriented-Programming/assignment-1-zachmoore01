@@ -1,21 +1,28 @@
 #include <iostream>
+using namespace std;
 
-using namespace std; 
-
+//Maximum Occupancy Program
 int main() {
+    int people;
+    int maximumCapacity;
+    cout << "\nThis is a program to determine if your room meets the fire code.\n"
+         << "Enter the maximum occupancy for the room.\n";
+    cin >> maximumCapacity;
+    cout << "Enter the number of occupants of the room.\n";
+    cin >> people;
 
-const int acc = 32; 
-int t; 
-int distance; 
+    if(people <= maximumCapacity)
+    {
+        cout <<"\nThe number of occupants does not exceed the legal maximum.\n";
+    }
 
-cout << "Enter a time in seconds: "<< endl; 
+    else
+    {
+        int diff = people - maximumCapacity;
+        cout <<"\nATTENTION: MAXIMUM OCCUPANCY EXCEEDED. THE LAW REQUIRES "
+             << diff
+             << " PERSONS TO LEAVE THE ROOM IMMEDIATELY\n";
+    }
 
-cin>> t; 
-
-distance = (acc/2) * (t*t);
-
-cout<< ""<< t << "will fall in" << distance << "feet"; 
-
-return 0; 
+    return 0;
 }
-
